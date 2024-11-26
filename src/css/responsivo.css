@@ -1,0 +1,123 @@
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+      font-size: 14px; /* Diminuindo o tamanho base da fonte */
+      padding: 10px;
+    }
+  
+    .container {
+      flex-direction: column; /* Alinha o conteúdo em coluna */
+      text-align: center; /* Centraliza o texto */
+      padding: 0;
+    }
+  
+    .header {
+      padding: 10px 0;
+    }
+  
+    .header .logo img {
+      max-height: 50px; /* Reduzindo o tamanho da logo */
+    }
+  
+    .menu ul {
+      flex-direction: column;
+      gap: 10px; /* Espaçamento reduzido */
+    }
+  
+    .menu .nav-link {
+      font-size: 14px;
+      padding: 8px 12px; /* Botões menores */
+    }
+  
+    #hero {
+      height: 80vh; /* Altura menor */
+      padding: 20px;
+    }
+  
+    #hero h1 {
+      font-size: 2.5rem; /* Fontes menores */
+      margin-bottom: 15px;
+    }
+  
+    #hero h2 {
+      font-size: 1.2rem;
+    }
+  
+    .hero-logo {
+      max-width: 250px; /* Imagem menor */
+      margin-top: 250px;
+    }
+  
+    .marine-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-container {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .text-container h2 {
+      font-size: 1.5rem; /* Reduzindo títulos */
+    }
+  
+    .text-container p {
+      font-size: 0.9rem; /* Reduzindo parágrafos */
+    }
+  
+    .image-container {
+      margin-top: 15px;
+    }
+  
+    .image-container img {
+      max-width: 90%; /* Imagem ajustada */
+      border-radius: 10px;
+      margin-top:20px ;
+    }
+  
+    .btn-conheca {
+      font-size: 0.9rem;
+      padding: 8px 16px; /* Botão menor */
+    }
+  
+    #brands {
+      padding: 30px 10px;
+      border-radius: 20px;
+    }
+  
+    .logos {
+      padding: 20px 10px;
+      max-width: 90%; /* Maior largura no mobile */
+    }
+  
+    .logos h2 {
+      font-size: 1.5rem;
+    }
+  
+    .logos img {
+      width: 80%; /* Ajuste da largura */
+    }
+
+    .footer {
+      padding: 20px 10px;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-logo img {
+      max-width: 150px; /* Logo menor no footer */
+    }
+  
+    .footer-contact {
+      align-items: center;
+    }
+  
+    .footer-bottom {
+      font-size: 0.8rem;
+    }
+  }
+  
