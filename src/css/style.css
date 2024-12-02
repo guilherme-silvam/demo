@@ -1,0 +1,412 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom right, #8ebee9, #e6eff8);
+    background-size: 400% 400%; /* Aumenta o tamanho do fundo para animação suave */
+    animation: onda 5s ease infinite; /* Animação do fundo com ondas */
+  }
+
+  @keyframes onda {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre logo e menu */
+    align-items: center;
+  }
+  
+  /* Header */
+  .header {
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none; /* Removendo borda */
+    background: linear-gradient(to bottom right, #8ebee9, #e6eff8);
+    background-size: 400% 400%; /* Aumenta o tamanho do fundo para animação suave */
+    animation: onda 5s ease infinite; /* Animação do fundo com ondas */
+    z-index: 1000; /* Garante que o header fique sempre acima */
+  }
+  
+  .header .logo img {
+    max-height: 60px;
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .menu .nav-link {
+    text-decoration: none;
+    color: #111; /* Cor inicial */
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .menu .nav-link:hover {
+    background: linear-gradient(45deg, #D62828, #ff6e7f);
+    border-radius: 10px;
+    transform: scale(1.1);
+    color: #ffffffff;
+  }
+
+  #language-select {
+    padding: 1px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #e6eff8;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none; /* Remove default arrow in most browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#language-select:focus {
+    outline: none;
+    border-color: #D62828;
+}
+
+#language-select option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Custom dropdown arrow */
+#language-select::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 18px;
+    color: #111;
+}
+
+  /* Hero Section */
+  #hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-content {
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .hero-logo {
+    max-width: 850px;
+    margin-top: 70px;
+  }
+  
+  #hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Propriedade de sombra */
+  }
+  
+  #hero h2 {
+    font-size: 1.8rem;
+    color: linear-gradient(45deg, #D62828, #ff6e7f);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 4); /* Propriedade de sombra */
+  }
+
+  /*About Us */
+  /* Estilos para a seção de texto e imagem */
+
+.marine-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 20px;
+  }
+  
+  .text-container {
+    flex: 1;
+    max-width: 500px;
+    max-height: 700px;
+  }
+  
+  .text-container h2 {
+    font-size: 1.8rem;
+    color: #D62828;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+
+  
+  .text-container p {
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 20px;
+  }
+
+  #slogan {
+    color: #D62828;
+    font-weight: bold;
+  }
+  
+  .image-container {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para o botão "Conheça Mais" */
+  .btn-conheca {
+    display: inline-block;
+    width: 170px;
+    padding: 12px 30px;
+    background-color: #ff6e7f; /* Cor azul */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-conheca:hover {
+    background-color: #D62828; /* Tom mais escuro do azul */
+    transform: translateY(-5px);
+  }
+  
+  .btn-conheca:active {
+    transform: translateY(0);
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .marine-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-container {
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  
+    .text-container {
+      margin-bottom: 20px;
+    }
+  
+    .text-container h2 {
+      font-size: 2rem;
+    }
+  
+    .text-container h4 {
+      font-size: 1.5rem;
+    }
+  
+    .btn-conheca {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  
+
+  /* Seção de Brands com imagem de fundo */
+#brands {
+    background: url('../image/Foto-marlin.png') no-repeat center center/cover;
+    background-size: cover; /* Garante que a imagem cubra a área sem distorcer */
+    background-position: center; /* Mantém a imagem centralizada */
+    padding: 60px 0;
+    position: relative; /* Para permitir o uso de pseudo-elementos ou outras camadas */
+    z-index: 1;
+    border-radius: 40px;
+    margin: 20px;
+}
+
+/* Seção de parceiros (Brands) */
+.logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px; /* Ajustando o padding para diminuir o espaço interno */
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco com leve opacidade */
+    margin: 0 auto; /* Centraliza a seção */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1.2); /* Menos sombra para dar um efeito mais sutil */
+    max-width: 60%; /* Limitando a largura da seção para 80% da página */
+    margin-top: 30px; /* Adiciona um espaço maior acima */
+    min-height: 40vh; /* Diminuindo a altura mínima da seção */
+}
+
+.logos h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #D62828;
+}
+
+.logos p{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Propriedade de sombra */
+    margin: 20px;
+}
+
+.logos img {
+    width: 60%; /* Ajustando a largura da imagem para 60% do container */
+    max-width: 500px; /* Limitando a largura máxima da imagem */
+    object-fit: contain; /* Garante que a imagem se ajuste corretamente */
+}
+
+/* VISION
+/* Estilos para o relógio de contagem regressiva */
+.countdown {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 60px; /* Para não cobrir com o header fixo */
+}
+
+#vision h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #D62828;
+}
+
+/* Relógio Digital Estilo Náutico */
+.clock {
+    font-family: 'Digital-7', sans-serif;
+    font-size: 72px;
+    color: #4A227E;
+    background-color: #fff;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção de mensagem sobre os 100 primeiros */
+.message {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.message h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.message p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Estilos do Footer */
+.footer {
+    background-color: #fff;
+    color: #111;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo img {
+    max-width: 200px;
+    height: auto;
+    margin: 20px;
+  }
+  
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .contact-item {
+    margin-right: 20px;
+  }
+  
+  .contact-link {
+    color: #111;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-link i {
+    margin-right: 10px;
+  }
+  
+  .contact-link:hover {
+    color: #007BFF;
+    text-decoration: underline;
+  }
+  
+  /* Estilo para o rodapé inferior */
+  .footer-bottom {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .footer-bottom i {
+    margin-left: 5px;
+  }
+  
+ 
+  
+
+
+  
+  
+ 
